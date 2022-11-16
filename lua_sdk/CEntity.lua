@@ -1,4 +1,29 @@
-require('lua_sdk.loader')({
+-- https://github.com/DK22Pac/plugin-sdk/blob/master/plugin_sa/game_sa/CEntity.cpp
+return require('lua_sdk.loader')({
     SetRwObjectAlpha = {'void (__thiscall *)(int, int)', 0x5332C0},
-    IsVisible = {'bool (__thiscall *)(int)', 0x536BC0}
+    IsVisible = {'bool (__thiscall *)(int)', 0x536BC0},
+    UpdateRwFrame = {'void (__thiscall *)(int)', 0x532B00},
+    UpdateRwMatrix = {'void(__thiscall*)(int)', 0x446F90},
+    UpdateRpHAnim = {'void (__thiscall *)(int)', 0x532B20},
+    ModifyMatrixForPoleInWind = {'void (__thiscall *)(int)', 0x532DB0},
+    SetupBigBuilding = {'void (__thiscall *)(int)', 0x533150},
+    ModifyMatrixForCrane = {'void (__thiscall *)(int)', 0x533170},
+    PreRenderForGlassWindow = {'void (__thiscall *)(int)', 0x533240},
+    TransformFromObjectSpace = {'void (__thiscall *)(int, CVector&, CVector const&)', 0x533560},
+    CreateEffects = {'void (__thiscall *)(int)', 0x533790},
+    DestroyEffects = {'void (__thiscall *)(int)', 0x533BF0},
+    AttachToRwObject = {'void (__thiscall *)(int, RwObject*, bool)', 0x533ED0},
+    DetachFromRwObject = {'void (__thiscall *)(int)', 0x533FB0},
+    GetBoundCentre = {'void (__thiscall *)(int, CVector&)', 0x534290},
+    RenderEffects = {'void (__thiscall *)(int)', 0x5342B0},
+    ModifyMatrixForTreeInWind = {'void (__thiscall *)(int)', 0x534E90},
+    ModifyMatrixForBannerInWind = {'void (__thiscall *)(int)', 0x535040},
+    CalculateBBProjection = {'void (__thiscall *)(int, CVector*, CVector*, CVector*, CVector*)', 0x535340},
+    UpdateAnim = {'void (__thiscall *)(int)', 0x535F00},
+    CleanUpOldReference = {'void (__thiscall *)(int, int*)', 0x571A00},
+    ResolveReferences = {'void (__thiscall *)(int)', 0x571A40},
+    PruneReferences = {'void (__thiscall *)(int)', 0x571A90},
+    RegisterReference = {'void (__thiscall *)(int, int*)', 0x571B70},
+    ProcessLightsForEntity = {'void (__thiscall *)(int)', 0x6FC7A0},
+    RemoveEscalatorsForEntity = {'void (__thiscall *)(int)', 0x717900},
 })
